@@ -1,0 +1,18 @@
+{% extends '_base.html' %}
+
+{% block content %}
+  <div class="container">
+    <h1>Профиль пользователя</h1>
+    <div class="row">
+      <div class="col-md-6">
+        <img src="{{ user.photo.url }}" alt="User Avatar" class="img-fluid">
+        <p><strong>Ник:</strong> {{ user.username }}</p>
+        <p><strong>Имя:</strong> {{ user.first_name }}</p>
+        <p><strong>Фамилия:</strong> {{ user.second_name }}</p>
+        <p><strong>Email:</strong> {{ user.email }}</p>
+        <p><strong>Рейтинг:</strong> {{ user.rating }}</p>
+        <p><strong>Статус:</strong> {{ user.get_status_display }}</p>
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends "_base.html" %}
+{% block content %}
+
+
+<div class="uk-section uk-section-muted" style="padding: 5%;">
+
+    <form class="uk-form-horizontal uk-margin-large" method="post">
+        {% csrf_token %}
+
+        <div class="uk-margin">
+            <label class="uk-form-label" for="form-horizontal-text">Название</label>
+            <div class="uk-form-controls">
+                {{ form.title }}
+            </div>
+        </div>
+
+        <div class="uk-margin">
+            <label class="uk-form-label" for="form-horizontal-text">Дата и Время</label>
+            <div class="uk-form-controls">
+                {{ form.game_date }}
+            </div>
+        </div>
+
+        <div class="uk-margin">
+            <label class="uk-form-label" for="form-horizontal-text">Адрес</label>
+            <div class="uk-form-controls">
+                {{ form.adress }}
+            </div>
+        </div>
+
+        <div class="uk-margin">
+            <label class="uk-form-label" for="form-horizontal-text">Статус</label>
+            <div class="uk-form-controls">
+                {{ form.status }}
+            </div>
+        </div>
+
+        <button type="submit" class="uk-button uk-button-default ">Создать</button>
+
+    </form>
+
+</div>
+
+
+{% endblock %}

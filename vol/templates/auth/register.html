@@ -1,0 +1,37 @@
+{% extends '_base.html' %}
+
+{% block content %}
+<div class="container-fluid text-center mt-5">
+    <div class="row justify-content-md-center">
+        <div class="col-4">
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.errors }}
+                <input type="text" name="email" required="" id="id_email" maxlength="150" class="form-control"
+                    placeholder="Email" aria-label="default input example">
+                <br>
+
+                <input type="text" name="username" required="" id="id_username" maxlength="150" class="form-control"
+                    placeholder="Username" aria-label="default input example">
+                <br>
+                <input type="text" name="first_name" required="" id="id_first_name" maxlength="150" class="form-control"
+                placeholder="first_name" aria-label="default input example">
+                <br>
+
+                <input type="text" name="second_name" required="" id="id_second_name" maxlength="150" class="form-control"
+                placeholder="second_name" aria-label="default input example">
+                <br>
+                <input type="file" name="photo" required="" id="id_photo" class="form-control">
+                <br>
+                <input type="password" name="password1" required="" class="form-control" id="id_password1"
+                    placeholder="Password">
+                <br>
+                <input type="password" name="password2" required="" class="form-control" id="id_password2"
+                    placeholder="Repeat password">
+                <br>
+                <button class="btn btn-primary" type="submit">Регистрация</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
